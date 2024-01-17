@@ -308,7 +308,7 @@ class Resultat implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setNote($note)
     {
 
-        if (!is_null($note) && ($note > 50)) {
+        if (!is_null($note) && ($note > 100)) {
             throw new \InvalidArgumentException('invalid value for $note when calling Resultat., must be smaller than or equal to 50.');
         }
         if (!is_null($note) && ($note < 0)) {
@@ -339,16 +339,16 @@ class Resultat implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setStatut($statut)
     {
-        $allowedValues = $this->getStatutAllowableValues();
-        if (!in_array($statut, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'statut', must be one of '%s'",
-                    $statut,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        $allowedValues = $this->getStatutAllowableValues();
+//        if (!in_array($statut, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value '%s' for 'statut', must be one of '%s'",
+//                    $statut,
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['statut'] = $statut;
 
         return $this;
