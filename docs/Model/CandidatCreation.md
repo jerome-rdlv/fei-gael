@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **nom** | **string** | Nom de famille du candidat |
 **patronyme** | **string** | Patronyme du candidat | [optional]
 **prenom** | **string** | Prénom du candidat | [optional]
-**dateNaissance** | [**\DateTime**](\DateTime.md) | date de naissance du candidat | [optional]
+**dateNaissance** | **\DateTime** | date de naissance du candidat | [optional]
 **anneeNaissance** | **int** | l&#39;année de naissance du candidat si sa date de naissance n&#39;est pas connue | [optional]
 **anneeNaissanceInconnue** | **bool** | si le candidat ne connait ni sa date, ni son année de naissance, ce flag doit être à true | [optional]
 **paysNaissance** | [**\Fei\Gael\Model\Pays**](Pays.md) |  |

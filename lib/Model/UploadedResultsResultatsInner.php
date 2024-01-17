@@ -1,6 +1,6 @@
 <?php
 /**
- * UploadedResults
+ * UploadedResultsResultatsInner
  *
  * PHP version 7.2
  *
@@ -33,10 +33,10 @@ use \ArrayAccess;
 use \Fei\Gael\ObjectSerializer;
 
 /**
- * UploadedResults Class Doc Comment
+ * UploadedResultsResultatsInner Class Doc Comment
  *
  * @category Class
- * @description Téléverser dans GAEL la liste de résultats des candidats pour un même examen, un même centre
+ * @description Résultats d&#39;un candidat ayant participé à cet examen
  * @package  Fei\Gael
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -44,7 +44,7 @@ use \Fei\Gael\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null  
  */
-class UploadedResults implements ModelInterface, ArrayAccess, \JsonSerializable
+class UploadedResultsResultatsInner implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -53,7 +53,7 @@ class UploadedResults implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'UploadedResults';
+    protected static $openAPIModelName = 'UploadedResults_resultats_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,10 +61,8 @@ class UploadedResults implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'session' => 'string',
-        'niveau' => '\Fei\Gael\Model\NiveauExamen',
-        'codeCentre' => 'string',
-        'resultats' => '\Fei\Gael\Model\UploadedResultsResultatsInner[]'
+        'numero' => 'string',
+        'resultats' => '\Fei\Gael\Model\Resultat[]'
     ];
 
     /**
@@ -75,9 +73,7 @@ class UploadedResults implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'session' => null,
-        'niveau' => null,
-        'codeCentre' => null,
+        'numero' => null,
         'resultats' => null
     ];
 
@@ -108,9 +104,7 @@ class UploadedResults implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'session' => 'session',
-        'niveau' => 'niveau',
-        'codeCentre' => 'codeCentre',
+        'numero' => 'numero',
         'resultats' => 'resultats'
     ];
 
@@ -120,9 +114,7 @@ class UploadedResults implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'session' => 'setSession',
-        'niveau' => 'setNiveau',
-        'codeCentre' => 'setCodeCentre',
+        'numero' => 'setNumero',
         'resultats' => 'setResultats'
     ];
 
@@ -132,9 +124,7 @@ class UploadedResults implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'session' => 'getSession',
-        'niveau' => 'getNiveau',
-        'codeCentre' => 'getCodeCentre',
+        'numero' => 'getNumero',
         'resultats' => 'getResultats'
     ];
 
@@ -198,9 +188,7 @@ class UploadedResults implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['session'] = $data['session'] ?? null;
-        $this->container['niveau'] = $data['niveau'] ?? null;
-        $this->container['codeCentre'] = $data['codeCentre'] ?? null;
+        $this->container['numero'] = $data['numero'] ?? null;
         $this->container['resultats'] = $data['resultats'] ?? null;
     }
 
@@ -213,14 +201,8 @@ class UploadedResults implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['session'] === null) {
-            $invalidProperties[] = "'session' can't be null";
-        }
-        if ($this->container['niveau'] === null) {
-            $invalidProperties[] = "'niveau' can't be null";
-        }
-        if ($this->container['codeCentre'] === null) {
-            $invalidProperties[] = "'codeCentre' can't be null";
+        if ($this->container['numero'] === null) {
+            $invalidProperties[] = "'numero' can't be null";
         }
         return $invalidProperties;
     }
@@ -238,73 +220,25 @@ class UploadedResults implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets session
+     * Gets numero
      *
      * @return string
      */
-    public function getSession()
+    public function getNumero()
     {
-        return $this->container['session'];
+        return $this->container['numero'];
     }
 
     /**
-     * Sets session
+     * Sets numero
      *
-     * @param string $session un code session FEI qui permet d'identifier la session. Il est composé de l'année sur 4 chiffres suivi du mois sur 2 chiffres et du code déclinaison.
+     * @param string $numero Numéro du candidat dans GAEL, unique.
      *
      * @return self
      */
-    public function setSession($session)
+    public function setNumero($numero)
     {
-        $this->container['session'] = $session;
-
-        return $this;
-    }
-
-    /**
-     * Gets niveau
-     *
-     * @return \Fei\Gael\Model\NiveauExamen
-     */
-    public function getNiveau()
-    {
-        return $this->container['niveau'];
-    }
-
-    /**
-     * Sets niveau
-     *
-     * @param \Fei\Gael\Model\NiveauExamen $niveau niveau
-     *
-     * @return self
-     */
-    public function setNiveau($niveau)
-    {
-        $this->container['niveau'] = $niveau;
-
-        return $this;
-    }
-
-    /**
-     * Gets codeCentre
-     *
-     * @return string
-     */
-    public function getCodeCentre()
-    {
-        return $this->container['codeCentre'];
-    }
-
-    /**
-     * Sets codeCentre
-     *
-     * @param string $codeCentre code centre / numéro d'établissement / numéro de centre, sur 6 chiffres, les 3 premiers encodant le territoire, les 3 suivants le centre.
-     *
-     * @return self
-     */
-    public function setCodeCentre($codeCentre)
-    {
-        $this->container['codeCentre'] = $codeCentre;
+        $this->container['numero'] = $numero;
 
         return $this;
     }
@@ -312,7 +246,7 @@ class UploadedResults implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets resultats
      *
-     * @return \Fei\Gael\Model\UploadedResultsResultatsInner[]|null
+     * @return \Fei\Gael\Model\Resultat[]|null
      */
     public function getResultats()
     {
@@ -322,7 +256,7 @@ class UploadedResults implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets resultats
      *
-     * @param \Fei\Gael\Model\UploadedResultsResultatsInner[]|null $resultats résultat de chaque candidat avec son numéro de candidat
+     * @param \Fei\Gael\Model\Resultat[]|null $resultats chaque examen est composé de plusieurs épreuves dont on peut saisir les notes.
      *
      * @return self
      */

@@ -1,5 +1,5 @@
 {
-    "name": "fei/gael",
+    "name": "jerome-rdlv/fei-gael",
     "description": "Ceci est l'API des web services exposés par le système informatique GAEL (Gestion Administrative En Ligne) pour France Éducation international.  Cette API offre les services suivants   * inscrire un ou plusieurs candidats à un examen  * importer dans GAEL les résultats d'un ou plusieurs candidats à un même examen",
     "keywords": [
         "openapitools",

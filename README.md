@@ -22,11 +22,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/fei/gael.git"
+      "url": "https://github.com/jerome-rdlv/fei-gael.git"
     }
   ],
   "require": {
-    "fei/gael": "*@dev"
+    "jerome-rdlv/fei-gael": "dev-master"
   }
 }
 ```
@@ -87,6 +87,7 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+- [AddNewCandidatsRequest](docs/Model/AddNewCandidatsRequest.md)
 - [AdressePostale](docs/Model/AdressePostale.md)
 - [Amenagement](docs/Model/Amenagement.md)
 - [CandidatCreation](docs/Model/CandidatCreation.md)
@@ -97,7 +98,6 @@ Class | Method | HTTP request | Description
 - [CritereReduction](docs/Model/CritereReduction.md)
 - [Devise](docs/Model/Devise.md)
 - [EpreuveType](docs/Model/EpreuveType.md)
-- [InlineObject](docs/Model/InlineObject.md)
 - [Inscriptions](docs/Model/Inscriptions.md)
 - [Langue](docs/Model/Langue.md)
 - [MotifInscription](docs/Model/MotifInscription.md)
@@ -109,7 +109,7 @@ Class | Method | HTTP request | Description
 - [Resultat](docs/Model/Resultat.md)
 - [Telephone](docs/Model/Telephone.md)
 - [UploadedResults](docs/Model/UploadedResults.md)
-- [UploadedResultsResultats](docs/Model/UploadedResultsResultats.md)
+- [UploadedResultsResultatsInner](docs/Model/UploadedResultsResultatsInner.md)
 - [UserNamePassword](docs/Model/UserNamePassword.md)
 
 ## Authorization

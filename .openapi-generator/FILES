@@ -1,10 +1,11 @@
 .gitignore
-.php_cs
+.php-cs-fixer.dist.php
 .travis.yml
 README.md
 composer.json
 docs/Api/AuthentificationApi.md
 docs/Api/ExamenApi.md
+docs/Model/AddNewCandidatsRequest.md
 docs/Model/AdressePostale.md
 docs/Model/Amenagement.md
 docs/Model/CandidatCreation.md
@@ -15,7 +16,6 @@ docs/Model/Civilite.md
 docs/Model/CritereReduction.md
 docs/Model/Devise.md
 docs/Model/EpreuveType.md
-docs/Model/InlineObject.md
 docs/Model/Inscriptions.md
 docs/Model/Langue.md
 docs/Model/MotifInscription.md
@@ -27,7 +27,7 @@ docs/Model/ResponseToken.md
 docs/Model/Resultat.md
 docs/Model/Telephone.md
 docs/Model/UploadedResults.md
-docs/Model/UploadedResultsResultats.md
+docs/Model/UploadedResultsResultatsInner.md
 docs/Model/UserNamePassword.md
 git_push.sh
 lib/Api/AuthentificationApi.php
@@ -35,6 +35,7 @@ lib/Api/ExamenApi.php
 lib/ApiException.php
 lib/Configuration.php
 lib/HeaderSelector.php
+lib/Model/AddNewCandidatsRequest.php
 lib/Model/AdressePostale.php
 lib/Model/Amenagement.php
 lib/Model/CandidatCreation.php
@@ -45,7 +46,6 @@ lib/Model/Civilite.php
 lib/Model/CritereReduction.php
 lib/Model/Devise.php
 lib/Model/EpreuveType.php
-lib/Model/InlineObject.php
 lib/Model/Inscriptions.php
 lib/Model/Langue.php
 lib/Model/ModelInterface.php
@@ -58,7 +58,7 @@ lib/Model/ResponseToken.php
 lib/Model/Resultat.php
 lib/Model/Telephone.php
 lib/Model/UploadedResults.php
-lib/Model/UploadedResultsResultats.php
+lib/Model/UploadedResultsResultatsInner.php
 lib/Model/UserNamePassword.php
 lib/ObjectSerializer.php
 phpunit.xml.dist

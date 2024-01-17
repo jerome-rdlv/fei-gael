@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 ## `addNewCandidats()`
 
 ```php
-addNewCandidats($inlineObject): \Fei\Gael\Model\CandidatCree[]
+addNewCandidats($addNewCandidatsRequest): \Fei\Gael\Model\CandidatCree[]
 ```
 
 Ajouter dans GAEL des candidats qui passent le DELF-DALF pour la première fois.
@@ -97,10 +97,10 @@ $apiInstance = new Fei\Gael\Api\ExamenApi(
     new GuzzleHttp\Client(),
     $config
 );
-$inlineObject = new \Fei\Gael\Model\InlineObject(); // \Fei\Gael\Model\InlineObject
+$addNewCandidatsRequest = new \Fei\Gael\Model\AddNewCandidatsRequest(); // \Fei\Gael\Model\AddNewCandidatsRequest | La liste des nouveaux candidats avec leurs informations
 
 try {
-    $result = $apiInstance->addNewCandidats($inlineObject);
+    $result = $apiInstance->addNewCandidats($addNewCandidatsRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ExamenApi->addNewCandidats: ', $e->getMessage(), PHP_EOL;
@@ -111,7 +111,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inlineObject** | [**\Fei\Gael\Model\InlineObject**](../Model/InlineObject.md)|  |
+ **addNewCandidatsRequest** | [**\Fei\Gael\Model\AddNewCandidatsRequest**](../Model/AddNewCandidatsRequest.md)| La liste des nouveaux candidats avec leurs informations |
 
 ### Return type
 
@@ -159,7 +159,7 @@ $apiInstance = new Fei\Gael\Api\ExamenApi(
 );
 $codeSession = 202209S; // string | Le code session pour laquelle on veut récupérer la liste des candidats
 $codeCentre = 001015; // string | Le numéro du centre dans GAEL tel qu'affiché sur l'onglet 'Statut du centre'
-$niveau = new \Fei\Gael\Model\\Fei\Gael\Model\NiveauExamen(); // \Fei\Gael\Model\NiveauExamen
+$niveau = new \Fei\Gael\Model\NiveauExamen(); // NiveauExamen
 
 try {
     $result = $apiInstance->getCandidatsFromExamen($codeSession, $codeCentre, $niveau);
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **codeSession** | **string**| Le code session pour laquelle on veut récupérer la liste des candidats |
  **codeCentre** | **string**| Le numéro du centre dans GAEL tel qu&#39;affiché sur l&#39;onglet &#39;Statut du centre&#39; |
- **niveau** | [**\Fei\Gael\Model\NiveauExamen**](../Model/.md)|  |
+ **niveau** | [**NiveauExamen**](../Model/.md)|  |
 
 ### Return type
 

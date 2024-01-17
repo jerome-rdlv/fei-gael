@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **numero** | **string** | Numéro du candidat dans GAEL, unique. |
 **nom** | **string** | Nom de famille du candidat |
 **prenom** | **string** | Prénom du candidat | [optional]
-**dateNaissance** | [**\DateTime**](\DateTime.md) | Date de naissance du candidat | [optional]
+**dateNaissance** | **\DateTime** | Date de naissance du candidat | [optional]
 **anneeNaissance** | **int** | Année de naissance du candidat. Renseignée si elle est connue mais qu&#39;on ne connait pas la date exacte. | [optional]
 **anneeNaissanceInconnue** | **bool** | Si le candidat ne connait ni sa date, ni son année de naissance, ce flag doit être à true | [optional]
 **motif** | [**\Fei\Gael\Model\MotifInscription**](MotifInscription.md) |  | [optional]
