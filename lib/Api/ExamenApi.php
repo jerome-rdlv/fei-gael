@@ -700,7 +700,7 @@ class ExamenApi
      *
      * @param  string $codeSession Le code session pour laquelle on veut récupérer la liste des candidats (required)
      * @param  string $codeCentre Le numéro du centre dans GAEL tel qu&#39;affiché sur l&#39;onglet &#39;Statut du centre&#39; (required)
-     * @param  NiveauExamen $niveau niveau (required)
+     * @param  string $niveau niveau (required)
      *
      * @throws \Fei\Gael\ApiException on non-2xx response
      * @throws \InvalidArgumentException
